@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookbdV2">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>BookBD</title>
+		<meta name="author" content="Nafis Ahmed">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-2.2.2.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+		<script src="js/controllers/mainCntrl.js"></script>
+		<script src="js/services/createElemSrv.js"></script>
+		<script src="js/controllers/navigationTopCntrl.js"></script>
+		<script src="js/controllers/headerCntrl.js"></script>
+		<script src="js/controllers/innerTopBodyCntrl.js"></script>
+		<!--<script src="js/controllers/form.js"></script>-->
+		
+		<link href="css/app.css" rel="stylesheet"/>
+	</head>
+
+	<body>
+		
+		<!--Top Navigation Panel-->
+		<nav class="navbar" ng-controller="navigationTop">
+		</nav>
+		
+		<!--Message and Form Column-->
+		<section class="container-fluid topBody" ng-controller="header">
+		</section>
+		
+		<section class="container-fluid innerBody" ng-controller="innerTopBody">
+		</section>
+		
+	</body>
+	
+</html>

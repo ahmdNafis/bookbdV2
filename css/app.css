@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Varela);
+* {
+	font-family: 'Varela', sans-serif;
+}
+
+body {
+	overflow-x:hidden;
+}
+
+.logo {
+	font-weight:900;
+	font-size: 1.55em;
+	color:#3F303F;
+}
+
+.navbar {
+	background-color:#F9F9F9;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.navItems li {
+	list-style:none;
+	margin: 1px 2px 2px;
+	display:inline-block;
+}
+
+.navItems a {
+	text-decoration:none;
+	color:#2F2F2F;
+	font-size:1em;
+	font-weight:700;
+}
+
+button.login {
+	padding-top:10px;
+}
+
+.topBody {
+	background-color:#30D7BB;
+	color:#fff;
+	margin:-20px;
+}
+
+.topBody .container {
+	margin-top:4em;
+	margin-bottom:4em;
+}
+
+.topBody h1 {
+	font-weight:bolder;
+}
+
+.msgLeft {
+	margin-top:6em;
+	margin-bottom:9em;
+}
+
+.btn-msg {
+	margin-top:.5em;
+	margin-bottom:.5em;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-right:150px;
+	padding-left:150px;
+	background-color:#4D545E;
+	border-style:none;
+}
+
+.formHead {
+	background-color:rgba(99, 122, 145, 1);
+	font-size:14px;
+	text-align:center;
+	border-top-left-radius:6px;
+	border-top-right-radius:6px;
+	margin-left:-25px;
+	margin-right:-25px;
+}
+
+.formHead h3 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.msgRight form{
+	border-radius:6px;
+	background-color:#F0F0F0;
+	padding-bottom:10px;
+	padding-right:25px;
+	padding-left:25px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.form-right fieldset {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.form-right fieldset input {
+	border-style:none;
+}
+
+.btn-form {
+	margin-top:.6em;
+	padding-left: 10.55em;
+	padding-right: 10.55em;
+	background-color:#16A086;
+	border-style:none;
+}
+
+.innerBodyHead {
+	text-align:center;
+	padding-top:6em;
+	padding-bottom:6em;
+}
+
+.innerBodyHead .headTag1 {
+	font-weight:bolder;	
+}
