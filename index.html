@@ -10,12 +10,23 @@
 		<title>BookBD</title>
 		<meta name="author" content="Nafis Ahmed">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://code.jquery.com/jquery-2.2.2.js"></script>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-		<script src="js/controllers/mainCntrl.js"></script>
+		<!--<script src="https://code.jquery.com/jquery-2.2.2.js"></script>-->
+		<script src="js/jquery-2.2.3.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>-->
+		<script src="js/scrollreveal.min.js"></script>
+		<script>
+			window.revObj = ScrollReveal({reset:true, duration:900, delay:100, mobile:true});
+		</script>
+		<!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
+		<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+		<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+		<script src="js/bootstrap/js/bootstrap.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>-->
+		<script src="js/angular.min.js"></script>
+		<script src="js/mainMod.js"></script>
+		<script src="js/services/responsiveColsSrv.js"></script>
 		<script src="js/services/createElemSrv.js"></script>
+		<script src="js/controllers/rootBodyCntrl.js"></script>
 		<script src="js/controllers/navigationTopCntrl.js"></script>
 		<script src="js/controllers/headerCntrl.js"></script>
 		<script src="js/controllers/innerTopBodyCntrl.js"></script>
@@ -24,7 +35,7 @@
 		<link href="css/app.css" rel="stylesheet"/>
 	</head>
 
-	<body>
+	<body ng-controller="rootBody">
 		
 		<!--Top Navigation Panel-->
 		<nav class="navbar" ng-controller="navigationTop">
@@ -34,6 +45,7 @@
 		<section class="container-fluid topBody" ng-controller="header">
 		</section>
 		
+		<!--Features Rows-->
 		<section class="container-fluid innerBody" ng-controller="innerTopBody">
 		</section>
 		

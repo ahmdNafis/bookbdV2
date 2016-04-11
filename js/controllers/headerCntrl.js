@@ -1,11 +1,25 @@
-app.controller("header", function($scope, createElem) {
+app.controller("header", function($scope, createElem, responsiveCols) {
 	var innerMsgContainer = createElem.newElem("div", "container", null, topBodyClass),
 	 	innerMsgRow = createElem.newElem("div", "row", null, innerMsgContainer),
-		colLeft = createElem.newElem("div", "msgLeft col-md-6", null, innerMsgRow),
+		colLeft = createElem.newElem("aside", "msgLeft "+responsiveCols.colSize("md", 6), null, innerMsgRow);
 		//Right Column variables
-		aside = createElem.newElem("aside", "msgRight col-md-6", null, innerMsgRow),
-		formElem = createElem.newElem("form", "form-horizontal form-inner", null, aside),
+		aside = createElem.newElem("aside", "msgRight "+responsiveCols.colSize("md", 6), null, innerMsgRow);
+	var	formElem = createElem.newElem("form", "form-horizontal form-inner", null, aside),
 		formGroup = createElem.newElem("div", "form-group form-group-lg form-right", null, formElem);
+		
+	(function() {
+		revObj			
+			.reveal(".topBody .msgLeft", {
+				distance:"9em",
+				origin:"left",
+				easing:"ease-out"
+			})
+			.reveal(".topBody .msgRight", {
+				distance:"9em", 
+				origin:"right",
+				easing:"ease-out"
+			});
+	})();
 		
 	$scope.msg = {
 		h1: "Start Reading Today",
@@ -35,8 +49,8 @@ app.controller("header", function($scope, createElem) {
 	
 	angular.forEach($scope.inputFields, function(value, key) {
 		var fieldSet = createElem.newElem("fieldset", null, null, formGroup);
-		if(key.toString() == "firstName" || key.toString() == "lastName") fieldSet.addClass("col-md-6");
-		else fieldSet.addClass("col-md-12"); 
+		if(key.toString() == "firstName" || key.toString() == "lastName") fieldSet.addClass(responsiveCols.colSize("md", 6));
+		else fieldSet.addClass(responsiveCols.colSize("md", 12)); 
 		switch(key.toString()) {
 			case "button":
 				var buttonElem = createElem.newElem("button", null, null, fieldSet);

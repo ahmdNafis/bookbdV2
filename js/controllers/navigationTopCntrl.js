@@ -26,6 +26,14 @@ app.controller("navigationTop", function($scope, createElem) {
 		}
 	});
 	
+	(function() {
+		revObj.reveal(".logo", {
+			distance:"25px",
+			origin:"bottom",
+			easing:"ease-in-out"
+		});
+	})();
+	
 	$("<button type='button'></button>").text("Login").addClass("btn btn-info navbar-btn").appendTo(navItems);
 	$("<button type='button'></button>").text("Register").addClass("btn btn-info navbar-btn").css({marginLeft: ".95em"}).appendTo(navItems);
 });
